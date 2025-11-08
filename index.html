@@ -9,16 +9,8 @@
 
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
-  <!-- Custom CSS -->
   <style>
-    /*-----------------------------------*\
-      #CUSTOM PROPERTY
-    \*-----------------------------------*/
-
     :root {
-      /**
-       * colors - Updated with modern gradient theme
-       */
       --primary: #3498db;
       --primary-dark: #2980b9;
       --secondary: #9b59b6;
@@ -30,9 +22,6 @@
       --bg-card: rgba(255, 255, 255, 0.1);
       --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
       
-      /**
-       * typography
-       */
       --ff-poppins: 'Poppins', sans-serif;
       --fs-1: 2.5rem;
       --fs-2: 2rem;
@@ -42,17 +31,10 @@
       --fs-6: 0.9rem;
       --fs-7: 0.8rem;
 
-      /**
-       * transitions
-       */
       --transition-fast: 0.3s ease;
       --transition-medium: 0.5s ease;
       --transition-slow: 0.8s ease;
     }
-
-    /*-----------------------------------*\
-      #RESET & BASE STYLES
-    \*-----------------------------------*/
 
     * {
       margin: 0;
@@ -74,7 +56,6 @@
       min-height: 100vh;
     }
 
-    /* Particle Canvas */
     #particles-js {
       position: fixed;
       width: 100%;
@@ -83,10 +64,6 @@
       left: 0;
       z-index: -1;
     }
-
-    /*-----------------------------------*\
-      #REUSED STYLES
-    \*-----------------------------------*/
 
     .container {
       max-width: 1200px;
@@ -151,18 +128,10 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
 
-    /*-----------------------------------*\
-      #MAIN LAYOUT
-    \*-----------------------------------*/
-
     main {
       display: flex;
       min-height: 100vh;
     }
-
-    /*-----------------------------------*\
-      #SIDEBAR
-    \*-----------------------------------*/
 
     .sidebar {
       width: 300px;
@@ -284,10 +253,6 @@
       transform: translateY(-5px);
     }
 
-    /*-----------------------------------*\
-      #MAIN CONTENT
-    \*-----------------------------------*/
-
     .main-content {
       flex: 1;
       margin-left: 300px;
@@ -312,10 +277,6 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
-    /*-----------------------------------*\
-      #HOME SECTION
-    \*-----------------------------------*/
 
     .home {
       min-height: 100vh;
@@ -367,10 +328,6 @@
       background: var(--primary);
       color: white;
     }
-
-    /*-----------------------------------*\
-      #ABOUT SECTION
-    \*-----------------------------------*/
 
     .about-content {
       display: grid;
@@ -447,10 +404,6 @@
       transform: translateY(-3px);
     }
 
-    /*-----------------------------------*\
-      #EXPERIENCE SECTION
-    \*-----------------------------------*/
-
     .timeline {
       position: relative;
       max-width: 800px;
@@ -525,10 +478,6 @@
       font-size: var(--fs-5);
       opacity: 0.9;
     }
-
-    /*-----------------------------------*\
-      #PORTFOLIO SECTION - MODIFIED
-    \*-----------------------------------*/
 
     .portfolio-filters {
       display: flex;
@@ -620,10 +569,6 @@
       width: fit-content;
     }
 
-    /*-----------------------------------*\
-      #CONTACT SECTION
-    \*-----------------------------------*/
-
     .contact-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -661,10 +606,6 @@
     .contact-details p {
       opacity: 0.8;
     }
-
-    /*-----------------------------------*\
-      #RESPONSIVE STYLES
-    \*-----------------------------------*/
 
     @media (max-width: 992px) {
       .sidebar {
@@ -763,10 +704,6 @@
       }
     }
 
-    /*-----------------------------------*\
-      #ANIMATIONS
-    \*-----------------------------------*/
-
     @keyframes float {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
@@ -805,7 +742,6 @@
       50% { border-color: var(--primary) }
     }
 
-    /* Pulse animation for CTA buttons */
     .pulse {
       animation: pulse 2s infinite;
     }
@@ -817,25 +753,19 @@
     }
   </style>
 
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <!-- Particles Background -->
   <div id="particles-js"></div>
 
-  <!-- Mobile Menu Toggle -->
   <div class="menu-toggle">
     <i class="fas fa-bars"></i>
   </div>
 
-  <!-- Sidebar -->
   <aside class="sidebar">
     <div class="sidebar-info">
       <div class="avatar-box floating">
@@ -891,9 +821,7 @@
     </div>
   </aside>
 
-  <!-- Main Content -->
   <main class="main-content">
-    <!-- Home Section -->
     <section id="home" class="page active">
       <div class="home">
         <div class="container">
@@ -904,14 +832,13 @@
               I'm a passionate Software Developer specializing in building dynamic, responsive, and scalable web applications. I love transforming ideas into functional, efficient, and user-friendly digital solutions.
             </p>
             <div class="home-btns fade-in">
-              <a href="#portfolio" class="btn pulse">View My Work</a>
+              <a href="#portfolio" class="btn pulse" id="view-work-btn">View My Work</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="page">
       <div class="container">
         <h2 class="section-title">About Me</h2>
@@ -988,7 +915,6 @@
       </div>
     </section>
 
-    <!-- Resume Section -->
     <section id="resume" class="page">
       <div class="container">
         <h2 class="section-title">My Resume</h2>
@@ -1058,7 +984,6 @@
       </div>
     </section>
 
-    <!-- Portfolio Section -->
     <section id="portfolio" class="page">
       <div class="container">
         <h2 class="section-title">My Portfolio</h2>
@@ -1072,7 +997,6 @@
         </div>
         
         <div class="portfolio-grid">
-          <!-- Project 1: Tuberculosis Detection -->
           <div class="portfolio-item" data-category="python">
             <a href="https://deeptb.onrender.com/" target="_blank">
               <img src="./assets/images/project-1.jpg" alt="Tuberculosis Detection" class="portfolio-img">
@@ -1092,7 +1016,6 @@
             </a>
           </div>
           
-          <!-- Project 2: CivicConnect -->
           <div class="portfolio-item" data-category="web">
             <a href="https://civicconnect-nfew.onrender.com/" target="_blank">
               <img src="./assets/images/project-2.png" alt="CivicConnect" class="portfolio-img">
@@ -1103,7 +1026,6 @@
             </a>
           </div>
           
-          <!-- Project 3: CloudDoc Manager -->
           <div class="portfolio-item" data-category="web">
             <a href="https://clouddoc-manager-interface.onrender.com/" target="_blank">
               <img src="./assets/images/project-3.jpg" alt="CloudDoc Manager" class="portfolio-img">
@@ -1114,7 +1036,6 @@
             </a>
           </div>
           
-          <!-- Project 4: Recipe Card -->
           <div class="portfolio-item" data-category="design">
             <a href="https://hardikkumar4472.github.io/Recipe-Card-Project/" target="_blank">
               <img src="./assets/images/project-4.png" alt="Recipe Card" class="portfolio-img">
@@ -1125,7 +1046,6 @@
             </a>
           </div>
           
-          <!-- Project 5: Sidebar Menu -->
           <div class="portfolio-item" data-category="design">
             <a href="https://hardikkumar4472.github.io/Side-Bar-Menu/" target="_blank">
               <img src="./assets/images/project-5.png" alt="Sidebar Menu" class="portfolio-img">
@@ -1136,7 +1056,6 @@
             </a>
           </div>
           
-          <!-- Project 6: Editham.io -->
           <div class="portfolio-item" data-category="design">
             <a href="https://hardikkumar4472.github.io/Editham.io/" target="_blank">
               <img src="./assets/images/project-6.png" alt="Editham.io" class="portfolio-img">
@@ -1147,7 +1066,6 @@
             </a>
           </div>
           
-          <!-- Project 7: OS Process Visualizer -->
           <div class="portfolio-item" data-category="dsa">
             <a href="https://hardikkumar4472.github.io/Operating-System-Processes-Visualization-Simulator/" target="_blank">
               <img src="./assets/images/project-7.png" alt="OS Process Visualizer" class="portfolio-img">
@@ -1158,7 +1076,6 @@
             </a>
           </div>
           
-          <!-- Project 8: Doctor Assistant Chatbot -->
           <div class="portfolio-item" data-category="web">
             <a href="https://doctor-assistance-chatbot.onrender.com/" target="_blank">
               <img src="./assets/images/project-9.png" alt="Doctor Assistant Chatbot" class="portfolio-img">
@@ -1168,13 +1085,10 @@
               </div>
             </a>
           </div>
-          
-          <!-- Project 9: Resume Builder -->
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="page">
       <div class="container">
         <h2 class="section-title">Get In Touch</h2>
@@ -1226,10 +1140,8 @@
     </section>
   </main>
 
-  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
-    // Initialize particles.js
     particlesJS('particles-js', {
       particles: {
         number: { value: 80, density: { enable: true, value_area: 800 } },
@@ -1264,52 +1176,59 @@
       retina_detect: true
     });
 
-    // Page Navigation
     document.addEventListener('DOMContentLoaded', function() {
       const navLinks = document.querySelectorAll('.nav-link');
       const pages = document.querySelectorAll('.page');
       const menuToggle = document.querySelector('.menu-toggle');
       const sidebar = document.querySelector('.sidebar');
+      const viewWorkBtn = document.getElementById('view-work-btn');
       
-      // Navigation functionality
       navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
           e.preventDefault();
           
-          // Remove active class from all links and pages
           navLinks.forEach(item => item.classList.remove('active'));
           pages.forEach(page => page.classList.remove('active'));
           
-          // Add active class to clicked link and corresponding page
           this.classList.add('active');
           const pageId = this.getAttribute('data-page');
           document.getElementById(pageId).classList.add('active');
           
-          // Close mobile sidebar after navigation
           if (window.innerWidth < 992) {
             sidebar.classList.remove('mobile-open');
           }
           
-          // Scroll to top of page
           window.scrollTo(0, 0);
         });
       });
       
-      // Mobile menu toggle
+      viewWorkBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        navLinks.forEach(item => item.classList.remove('active'));
+        pages.forEach(page => page.classList.remove('active'));
+        
+        document.querySelector('[data-page="portfolio"]').classList.add('active');
+        document.getElementById('portfolio').classList.add('active');
+        
+        if (window.innerWidth < 992) {
+          sidebar.classList.remove('mobile-open');
+        }
+        
+        window.scrollTo(0, 0);
+      });
+      
       menuToggle.addEventListener('click', function() {
         sidebar.classList.toggle('mobile-open');
       });
       
-      // Portfolio filtering
       const filterBtns = document.querySelectorAll('.filter-btn');
       const portfolioItems = document.querySelectorAll('.portfolio-item');
       
       filterBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-          // Remove active class from all buttons
           filterBtns.forEach(item => item.classList.remove('active'));
           
-          // Add active class to clicked button
           this.classList.add('active');
           
           const filterValue = this.getAttribute('data-filter');
@@ -1332,7 +1251,6 @@
         });
       });
       
-      // Scroll animations
       const fadeElements = document.querySelectorAll('.fade-in');
       
       const fadeInOnScroll = function() {
@@ -1346,9 +1264,8 @@
         });
       };
       
-      // Check on load and scroll
       window.addEventListener('scroll', fadeInOnScroll);
-      fadeInOnScroll(); // Initial check
+      fadeInOnScroll();
     });
   </script>
 </body>
